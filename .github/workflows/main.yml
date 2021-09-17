@@ -11,5 +11,5 @@ jobs:
           echo "::set-output name=getdir::$(./.github/scripts/getdir.sh)\n"
         shell: bash
       - name: Print dir
-        run: echo ${{steps.get_dir.outputs.getdir}}
+        run: echo ${{ steps.get_dir.outputs.getdir }}
         shell: bash
