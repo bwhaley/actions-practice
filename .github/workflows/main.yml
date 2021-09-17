@@ -6,11 +6,11 @@ jobs:
     name: A practice job
     steps:
       - uses: actions/checkout@v2
-      - name: Get dir
-        id: get_dir
+      - name: Source Ref
+        id: source_ref
         run: |
-          echo "::set-output name=getdir::$(./.github/scripts/getdir.sh)"
+          echo "::set-output name=source_ref::$(./.github/scripts/source-ref.sh)"
         shell: bash
-      - name: Print dir
-        run: echo ${{ steps.get_dir.outputs.getdir }}
+      - name: Print source ref
+        run: echo ${{ steps.source_ref.outputs.source_ref }}
         shell: bash
